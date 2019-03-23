@@ -32,7 +32,7 @@ system.initialize = function() {
                     origin.entity,
                     MinecraftComponent.Position
                   );
-                  Object.assign(component, { x, y, z });
+                  Object.assign(component.data, { x, y, z });
                   this.applyComponentChanges(origin.entity, component);
                 }
               })
