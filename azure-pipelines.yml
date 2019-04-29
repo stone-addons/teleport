@@ -25,7 +25,6 @@ steps:
     zip ../teleport.mcpack *
   displayName: 'build pack'
 
-- task: PublishPipelineArtifact@0
+- task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'teleport'
-    targetPath: 'PublishPipelineArtifact'
+    ArtifactName: 'teleport.mcpack'
