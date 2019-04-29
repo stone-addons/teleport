@@ -19,3 +19,13 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: |
+    cd build
+    zip ../teleport.mcpack *
+  displayName: 'build pack'
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'teleport'
+    targetPath: 'PublishPipelineArtifact'
