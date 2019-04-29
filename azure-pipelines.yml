@@ -27,4 +27,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
+    PathtoPublish: 'teleport.mcpack'
     ArtifactName: 'teleport.mcpack'
