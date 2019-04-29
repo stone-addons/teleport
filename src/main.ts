@@ -110,6 +110,20 @@ system.initialize = function() {
           const info = this.actorInfo(origin.entity) as PlayerInfo;
           if (!info) throw `Cannot found actor info`;
           const target = players[0];
+          const targetinfo = this.actorInfo(target) as PlayerInfo;
+          if (targetinfo.dim != info.dim) {
+            this.openModalForm(
+              target,
+              JSON.stringify({
+                type: "modal",
+                title: "Teleport failed",
+                content: "Cannot teleport cross the dimensions",
+                button1: "Ok",
+                button2: "Cancel"
+              })
+            );
+            return;
+          }
           this.openModalForm(
             target,
             JSON.stringify({
