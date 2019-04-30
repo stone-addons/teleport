@@ -7,7 +7,7 @@
     "typescript-bundle": "latest"
   },
   "scripts": {
-    "build": "tsc-bundle tsconfig.json --entryPoint main",
+    "build": "tsc-bundle tsconfig.json --entryPoint main --debug",
     "watch": "tsc-bundle tsconfig.json --watch --entryPoint main"
   }
 }
