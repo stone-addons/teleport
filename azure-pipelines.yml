@@ -19,6 +19,7 @@ steps:
     npm install
     npm run build
     cd build
+    ls scripts/server
     zip ../teleport.mcpack *
   displayName: 'npm install and build'
 
