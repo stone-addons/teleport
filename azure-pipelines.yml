@@ -18,10 +18,12 @@ steps:
 - script: |
     npm install
     npm run build
-    cd build
-    ls scripts/server
-    zip ../teleport.mcpack *
   displayName: 'npm install and build'
+
+- script: |
+    cd build
+    zip ../teleport.mcpack * -r
+  displayName: 'build pack'
 
 - task: PublishBuildArtifacts@1
   inputs:
